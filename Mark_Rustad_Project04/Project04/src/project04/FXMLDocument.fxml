@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet project04Style.css?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="650.0" prefWidth="635.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="project04.FXMLDocumentController">
+  <children>
+    <Pane fx:id="titlePane" layoutX="14.0" layoutY="14.0" prefHeight="58.0" prefWidth="607.0">
+      <children>
+        <Label fx:id="titleLabel" layoutX="14.0" layoutY="10.0" text="PAYROLL ADMINISTRATION MODULUS" textFill="GREY">
+          <font>
+            <Font name="Trebuchet MS Bold Italic" size="33.0" />
+          </font>
+        </Label>
+      </children>
+    </Pane>
+    <HBox fx:id="hboxOne" layoutX="155.0" layoutY="155.0" prefHeight="50.0" prefWidth="326.0" spacing="10.0">
+      <children>
+        <Label fx:id="empnoLabel" prefHeight="24.0" prefWidth="160.0" text="Get Employee Info:">
+          <font>
+            <Font name="Trebuchet MS" size="18.0" fx:id="x1" />
+          </font>
+        </Label>
+        <TextField fx:id="empnoField" prefHeight="24.0" prefWidth="134.0" promptText="Enter Emp No." />
+      </children>
+      <padding>
+        <Insets top="10.0" />
+      </padding>
+    </HBox>
+    <GridPane fx:id="theGridPane" gridLinesVisible="false" hgap="10.0" layoutX="125.0" layoutY="252.0" prefHeight="344.0" prefWidth="391.0" vgap="3.0">
+      <children>
+        <Label fx:id="idLabel" font="$x1" prefWidth="168.0" text="Employee No.:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="idField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="lastNameLabel" font="$x1" text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="lastNameField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="firstNameField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="middleField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="stateField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="departmentField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="levelField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="salaryField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <TextField fx:id="minField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField fx:id="maxField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Label fx:id="firstNameLabel" font="$x1" text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Label font="$x1" text="Middle Initial:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label font="$x1" text="State:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Label font="$x1" text="Department:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Label font="$x1" text="Job Level:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Label font="$x1" text="Salary:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <Label font="$x1" text="Salary Minimum:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+        <Label font="$x1" text="Salary Maximum:" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="185.0" minWidth="10.0" prefWidth="150.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="201.0" />
+      </columnConstraints>
+      <padding>
+        <Insets left="5.0" right="5.0" />
+      </padding>
+      <rowConstraints>
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <GridPane fx:id="penPane" layoutX="140.0" layoutY="548.0" prefHeight="31.0" prefWidth="361.0">
+      <children>
+        <Label fx:id="penLevelLabel" font="$x1" prefWidth="256.0" text="Penetration into Job Level (%) :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="penLevelField" editable="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="282.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="79.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+    <HBox fx:id="buttonPane" layoutX="116.0" layoutY="105.0" minHeight="33.0" prefHeight="50.0" prefWidth="440.0" spacing="20.0">
+      <children>
+        <Button fx:id="createButton" contentDisplay="LEFT" minHeight="30.0" mnemonicParsing="false" onAction="#createPressed" prefHeight="30.0" prefWidth="87.0" text="CREATE">
+          <font>
+            <Font name="Trebuchet MS" size="16.0" fx:id="x2" />
+          </font>
+        </Button>
+        <Button id="updateButton" fx:id="readButton" font="$x2" minHeight="30.0" mnemonicParsing="false" onAction="#readPressed" prefHeight="30.0" prefWidth="87.0" text="READ" />
+        <Button fx:id="updateButton" font="$x2" minHeight="30.0" mnemonicParsing="false" onAction="#updatePressed" prefHeight="30.0" prefWidth="87.0" text="UPDATE" />
+        <Button fx:id="deleteButton" font="$x2" minHeight="21.0" mnemonicParsing="false" onAction="#deletePressed" prefHeight="30.0" prefWidth="84.0" text="DELETE" />
+      </children>
+      <padding>
+        <Insets left="5.0" right="5.0" top="10.0" />
+      </padding>
+    </HBox>
+    <HBox fx:id="basePane" layoutX="95.0" layoutY="604.0" prefHeight="38.3173828125" prefWidth="440.0" spacing="8.0">
+      <children>
+        <Label fx:id="progressLabel" prefHeight="32.0" prefWidth="263.0" text="" textFill="#cc0000">
+          <font>
+            <Font name="Trebuchet MS Bold" size="18.0" />
+          </font>
+        </Label>
+        <Button fx:id="clearButton" font="$x1" mnemonicParsing="false" onAction="#clearPressed" prefWidth="94.0" text="CLEAR" />
+        <Button fx:id="exitButton" font="$x1" mnemonicParsing="false" onAction="#exitPressed" prefWidth="83.0" text="EXIT" />
+      </children>
+    </HBox>
+    <HBox fx:id="actionPane" layoutX="101.0" layoutY="212.0" prefHeight="39.0" prefWidth="440.0" spacing="15.0">
+      <children>
+        <Button id="runButton" fx:id="storeButton" font="$x1" mnemonicParsing="false" onAction="#storePressed" prefHeight="33.0" prefWidth="98.0" text="STORE" wrapText="true" />
+        <Button fx:id="runButton" font="$x1" mnemonicParsing="false" onAction="#runPressed" prefWidth="113.0" text="RETRIEVE" />
+        <Button id="editButton" fx:id="saveButton" font="$x1" mnemonicParsing="false" onAction="#savePressed" prefWidth="98.0" text="SAVE" />
+        <Button fx:id="eraseButton" font="$x1" mnemonicParsing="false" onAction="#erasePressed" prefWidth="98.0" text="ERASE" />
+      </children>
+    </HBox>
+    <Label fx:id="promptPane" font="$x1" layoutX="203.0" layoutY="72.0" prefHeight="38.3173828125" prefWidth="235.0" text="What Would You Like To Do?" />
+  </children>
+  <stylesheets>
+    <URL value="@project04Style.css" />
+  </stylesheets>
+</AnchorPane>
